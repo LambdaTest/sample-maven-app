@@ -50,6 +50,8 @@ public class AppTest
 
         String url = System.getProperty("HUB_URL");
         System.err.println(url);
+
+        try {
         RemoteWebDriver driver = new RemoteWebDriver(new java.net.URL(url), capabilities);
         System.err.println(driver);
 
@@ -62,6 +64,9 @@ public class AppTest
 
         driver.get("https://lambdatest.com/");
         driver.quit();
+        } catch (Exception e) {
+          System.err.println("failed: " + e);
+        }
 
         assertTrue( true );
     }

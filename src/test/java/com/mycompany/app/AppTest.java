@@ -48,17 +48,21 @@ public class AppTest
         //apabilities.setCapability("chrome.driver","78.0");
         capabilities.setCapability("w3c", true);
 
-        String url = System.getenv("HUB_URL");
+        String url = System.getProperty("HUB_URL");
         System.err.println(url);
-        url = System.getProperty("HUB_URL");
-        System.err.println(url);
-        //driver = new RemoteWebDriver(new URL(url), capabilities);
-        //System.err.println(driver);
+        RemoteWebDriver driver = new RemoteWebDriver(new java.net.URL(url), capabilities);
+        System.err.println(driver);
+
+        driver.get("https://10.0.0.1/");
 
         System.err.println("sleeping for some time " + new java.util.Date());
         try { Thread.sleep(20 * 1000); } catch(Exception e) {}
         System.err.println("waking up after some time " + new java.util.Date());
         System.err.println("Hello, World!");
+
+        driver.get("https://lambdatest.com/");
+        driver.quit();
+
         assertTrue( true );
     }
 }

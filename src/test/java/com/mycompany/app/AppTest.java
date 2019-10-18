@@ -28,7 +28,7 @@ public class AppTest
     public void shouldAnswerWithTrue()
     {
         System.err.println("starting at " + new java.util.Date());
-        try { Thread.sleep(10 * 1000); } catch(Exception e) {}
+        //try { Thread.sleep(10 * 1000); } catch(Exception e) {}
 
         //ChromeOptions capabilities = new ChromeOptions();
         DesiredCapabilities capabilities = new DesiredCapabilities();

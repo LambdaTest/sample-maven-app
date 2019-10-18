@@ -27,6 +27,9 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
+        System.err.println("starting at " + new java.util.Date());
+        try { Thread.sleep(3 * 1000); } catch(Exception e) {}
+
         //ChromeOptions capabilities = new ChromeOptions();
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", "Chrome");
@@ -50,6 +53,7 @@ public class AppTest
 
         String url = System.getProperty("HUB_URL");
         System.err.println(url);
+        System.err.println("triggering lambdatest test at " + new java.util.Date());
 
         try {
         RemoteWebDriver driver = new RemoteWebDriver(new java.net.URL(url), capabilities);
@@ -67,6 +71,7 @@ public class AppTest
         } catch (Exception e) {
           System.err.println("failed: " + e);
         }
+        System.err.println("ending at " + new java.util.Date());
 
         assertTrue( true );
     }

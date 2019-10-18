@@ -15,7 +15,9 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        try { Thread.sleep(10); } catch(Exception e) {}
+        System.err.println("sleeping for some time " + new java.util.Date());
+        try { Thread.sleep(20 * 1000); } catch(Exception e) {}
+        System.err.println("waking up after some time " + new java.util.Date());
         System.err.println("Hello, World!");
         assertTrue( true );
     }

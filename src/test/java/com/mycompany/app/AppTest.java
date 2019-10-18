@@ -28,7 +28,7 @@ public class AppTest
     public void shouldAnswerWithTrue()
     {
         System.err.println("starting at " + new java.util.Date());
-        try { Thread.sleep(3 * 1000); } catch(Exception e) {}
+        try { Thread.sleep(10 * 1000); } catch(Exception e) {}
 
         //ChromeOptions capabilities = new ChromeOptions();
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -59,7 +59,7 @@ public class AppTest
         RemoteWebDriver driver = new RemoteWebDriver(new java.net.URL(url), capabilities);
         System.err.println(driver);
 
-        driver.get("https://10.0.0.1/");
+        driver.get("http://ifconfig.me/");
 
         System.err.println("sleeping for some time " + new java.util.Date());
         try { Thread.sleep(20 * 1000); } catch(Exception e) {}

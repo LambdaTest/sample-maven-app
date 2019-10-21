@@ -92,7 +92,7 @@
         </plugin>
         <plugin>
           <groupId>net.masterthought</groupId>
-          <artifaceId>maven-cucumber-reporting</artifactId>
+          <artifactId>maven-cucumber-reporting</artifactId>
           <version>0.0.5</version>
           <executions>
             <execution>
